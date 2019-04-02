@@ -53,7 +53,7 @@ def run():
                          delimiter=' ')
     testData = np.genfromtxt('dataForTesting.txt',
                                 delimiter = ' ')
-    learning_rate = 0.00015
+    learning_rate = 0.0002
 
     trainingData = standardize(trainingData)
     testData = standardize(testData)
@@ -74,7 +74,7 @@ def run():
     plt.figure(1)
     plt.plot(X, errorForTraining)
     plt.plot(X, errorForTesting)
-    plt.title('BGD with learning rate = 0.00015')
+    plt.title('SGD with learning rate = 0.0002')
     plt.xlabel('Iterations')
     plt.ylabel('Error')
     plt.show()
